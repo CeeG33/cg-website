@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="static/style.css" />
+    <title>{% block title %}{% endblock %} - Ciran GÜRBÜZ ©</title>
+    {% endblock %}
+</head>
+<nav>
+    <ul>
+        {% for key, item in navigation.items() %}
+            <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+<body>
+    <section>{% block content %}{% endblock %}</section>
+    <footer>
+        {% block footer %}
+        &copy; 2023 by Ciran GÜRBÜZ A.K.A CeeG33.
+        {% endblock %}
+    </footer>
+</body>
+</html>
+
