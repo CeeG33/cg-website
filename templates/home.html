@@ -1,6 +1,20 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-    <h1>Home</h1>
-    <p>Welcome to my personal website !</p>
+<link rel="stylesheet" href="static/cover.css">
+
+<div class="container-fluid d-flex p-3 mx-auto flex-column text-center align-self-center">
+
+    <main class="px-3">
+        <h1>Welcome to my website !</h1>
+        <p class="lead">I am <strong>Ciran</strong>, a software developer / problem solver specialised in Python / Django.</p>
+        <p class="lead">Want to know more about : </p>
+        <p class="lead">
+            <a href="/summary" class="btn btn-lg btn-light fw-bold border-white bg-white">My skills ?</a>
+            <a href="/projects" class="btn btn-lg btn-light fw-bold border-white bg-white">My projects ?</a>
+            <a href="/about_me" class="btn btn-lg btn-light fw-bold border-white bg-white">Me ?</a>
+        </p>
+    </main>
+
+</div>
 {% endblock %}

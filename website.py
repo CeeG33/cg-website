@@ -6,22 +6,26 @@ app = Flask(__name__)
 navigation = {
     "home": {
         "href": "/",
-        "caption": "Home"
+        "caption": "Home",
+        "icon": "#home"
     },
     
     "summary": {
         "href": "/summary",
-        "caption": "Summary"
+        "caption": "Summary",
+        "icon": "#summary"
     },
     
     "projects": {
         "href": "/projects",
-        "caption": "Projects"
+        "caption": "Projects",
+        "icon": "#projects"
     },
     
     "about_me": {
         "href": "/about_me",
-        "caption": "About Me"
+        "caption": "About Me",
+        "icon": "#about_me"
     },
 }
 

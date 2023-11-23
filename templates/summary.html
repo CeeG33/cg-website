@@ -1,6 +1,52 @@
 {% extends "base.html" %}
 {% block title %}Projects{% endblock %}
 {% block content %}
-    <h1>Summary</h1>
-    <p>This is the summary page</p>
+
+<div class="container-fluid d-flex px-4 py-5 mx-auto flex-column align-self-center" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">Summary</h2>
+    <div class="row"><p>This is a list of languages, frameworks and libraries I used through my career:</p></div>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+            </div>
+            <div>
+                <h3 class="fs-2 text-body-emphasis">Coding Languages</h3>
+                <ul>
+                    <li>Python (including Object Oriented Programming)</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+            </div>
+            <div>
+                <h3 class="fs-2 text-body-emphasis">Development Methods</h3>
+                <ul>
+                    <li>Agile</li>
+                    <li>Scrum</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
+            </div>
+            <div>
+                <h3 class="fs-2 text-body-emphasis">Frameworks</h3>
+                <ul>
+                    <li>Django</li>
+                    <li>Django REST Framework</li>
+                    <li>Flask</li>
+                    <li>BootStrap 5</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
