@@ -1,6 +1,443 @@
 {% extends "base.html" %}
 {% block title %}Projects{% endblock %}
 {% block content %}
-    <h1>Projects</h1>
-    <p>This is the projects page</p>
+
+<link rel="stylesheet" href="static/projects.css">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="github" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+    </symbol>
+    <symbol id="docker" viewBox="0 0 16 16">
+        <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567zM7.5 9.933l-2.75 1.571v3.134l2.75-1.571zm1 3.134 2.75 1.571v-3.134L8.5 9.933zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134zM5.258 2.643 8 4.21l2.742-1.567L8 1.076zM15 9.933l-2.75 1.571v3.134L15 13.067zM3.75 14.638v-3.134L1 9.933v3.134z"/>
+    </symbol>
+</svg>
+
+<main class="container-fluid">
+    <div class="p-3 p-md-5 m-md-3 border-bottom text-center text-bg-dark">
+        <div class="col-md-6 p-lg-5 mx-auto my-5">
+            <h1 class="display-3 fw-bold">Projects</h1>
+            <h3 class="fw-normal mb-3">All my public projects have been realised using Git versioning and are available on my GitHub profile.</h3>
+            <div class="d-flex gap-3 justify-content-center lead fw-normal">
+                <a class="icon text-decoration-none" href="https://github.com/CeeG33">
+                    <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis bg-light-subtle border border-dark-subtle rounded-pill">
+                    <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                    My GitHub
+                    </span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid w-100 my-md-3 ps-md-3">
+        <div class="row">
+            <div class="col text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+
+                    <h2 class="display-5">Scaling an existing Django app</h2>
+                    <p class="lead">Orange County Lettings is a start-up company offering accommodations rental services. The company is in a substantial growth phase in the United States.</p>
+
+                    <p class="lead text-decoration-underline">Problems solved</p>
+                    <ul class="lead text-start">
+                        <li>Improving the application's architecture by splitting it into three applications.</li>
+                        <li>Solving existing technical debts on the code base.</li>
+                        <li>Ensuring further code produced meets industry quality standards by adding a CI pipeline.</li>
+                        <li>Pushing the code to production using a CD pipeline.</li>
+                        <li>Monitoring the live application's behaviour against bugs and errors to enable the development team to tackle the unexpected quickly.</li>
+                        <li>Documenting the application from scratch to enable smooth development and onboarding process.</li>
+                    </ul>
+
+                    <p class="lead text-decoration-underline">Tools used</p>
+                    <span class="badge rounded-pill text-bg-secondary">Python</span> 
+                    <span class="badge rounded-pill text-bg-secondary">Django</span>
+                    <span class="badge rounded-pill text-bg-secondary">Docker</span>
+                    <span class="badge rounded-pill text-bg-secondary">Docker Hub</span>
+                    <span class="badge rounded-pill text-bg-secondary">GitHub Actions</span>
+                    <span class="badge rounded-pill text-bg-secondary">AWS</span>
+                    <span class="badge rounded-pill text-bg-secondary">Sphinx</span>
+                    <span class="badge rounded-pill text-bg-secondary">Read the Docs</span>
+                    <p class="lead text-decoration-underline mt-4">Links</p>
+                    
+                    <div class="d-flex gap-3 justify-content-center mt-1">
+                        <a class="icon text-decoration-none" href="https://github.com/CeeG33/oc-cg-p13">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                                Repository
+                            </span>
+                        </a>
+
+                        <a class="icon text-decoration-none" href="https://hub.docker.com/repository/docker/ceeg33/oc-cg-p13/general">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#docker"/></svg>
+                                Docker Hub
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="static/images/p13.png" class="img-fluid rounded-top" alt="Screenshot of one project">
+                
+            </div>
+
+            <div class="col text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+
+                    <h2 class="display-5">Creating a secured CRM software from scratch</h2>
+                    <p class="lead">Epic Events is an events management and advisory company targeting particularly start-ups companies that want to organise “epic events”. Epic Events is in need of a CRM solution to track and monitor their clients and events.</p>
+
+                    <p class="lead text-decoration-underline">Problems solved</p>
+                    <ul class="lead text-start">
+                        <li>Modelling client's abstract needs into UML sketches.</li>
+                        <li>Creating a new database populated via an ORM.</li>
+                        <li>Producing a brand new Command-Line Interface software.</li>
+                        <li>Securing the software by following the OWASP standards.</li>
+                        <li>Monitoring the application following specific needs.</li>
+                    </ul>
+
+                    <p class="lead text-decoration-underline">Tools used</p>
+                    <span class="badge rounded-pill text-bg-secondary">Python</span> 
+                    <span class="badge rounded-pill text-bg-secondary">Peewee ORM</span>
+                    <span class="badge rounded-pill text-bg-secondary">Typer CLI</span>
+                    <span class="badge rounded-pill text-bg-secondary">Draw.io</span>
+
+                    <p class="lead text-decoration-underline mt-4">Links</p>
+                    
+                    <div class="d-flex gap-3 justify-content-center mt-1">
+                        <a class="icon text-decoration-none" href="https://github.com/CeeG33/oc-cg-p12">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                                Repository
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="static/images/p12.png" class="img-fluid rounded-top" alt="Screenshot of one project">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid w-100 my-md-3 ps-md-3">
+        <div class="row">
+            <div class="col text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+
+                    <h2 class="display-5">Improving an existing Flask app by implementing tests and debugging</h2>
+                    <p class="lead">GÜDLFT is a company offering online platforms to coordinate lifting competitions in the US and Australia. They are currently developing a lightweight and a more cost efficient product for smaller local clubs.</p>
+
+                    <p class="lead text-decoration-underline">Problems solved</p>
+                    <ul class="lead text-start">
+                        <li>Tackling the existing bugs.</li>
+                        <li>Ensuring code quality by implementing a test suite.</li>
+                        <li>Simulating application behaviour with simultaneous users.
+                        </li>
+                    </ul>
+
+                    <p class="lead text-decoration-underline">Tools used</p>
+                    <span class="badge rounded-pill text-bg-secondary">Python</span> 
+                    <span class="badge rounded-pill text-bg-secondary">Flask</span>
+                    <span class="badge rounded-pill text-bg-secondary">Pytest</span>
+                    <span class="badge rounded-pill text-bg-secondary">Locust</span>
+
+                    <p class="lead text-decoration-underline mt-4">Links</p>
+                    
+                    <div class="d-flex gap-3 justify-content-center mt-1">
+                        <a class="icon text-decoration-none" href="https://github.com/CeeG33/oc-cg-p11">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                                Repository
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="static/images/p11.png" class="img-fluid rounded-top" alt="Screenshot of one project">
+                
+            </div>
+
+            <div class="col text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+
+                    <h2 class="display-5">Creating a RESTful API from scratch</h2>
+                    <p class="lead">SoftDesk, a company specialised in the production of collaboration software has decided to create a new software which will enable organisations to track and monitor technical issues (tickets) : SoftDesk Support.</p>
+
+                    <p class="lead text-decoration-underline">Problems solved</p>
+                    <ul class="lead text-start">
+                        <li>Implementing an authentication process using tokens.</li>
+                        <li>Restricting access to specific data depending on the user profile.</li>
+                        <li>Automating the dependencies update by the use of Poetry.</li>
+                        <li>Securing the software by following the OWASP standards.</li>
+                        <li>Complying to user data protection rules (RGPD).</li>
+                        <li>Adopting the use of the green code concept.</li>
+                    </ul>
+
+                    <p class="lead text-decoration-underline">Tools used</p>
+                    <span class="badge rounded-pill text-bg-secondary">Python</span> 
+                    <span class="badge rounded-pill text-bg-secondary">Django REST Framework</span>
+                    <span class="badge rounded-pill text-bg-secondary">Postman</span>
+                    <span class="badge rounded-pill text-bg-secondary">Poetry</span>
+
+                    <p class="lead text-decoration-underline mt-4">Links</p>
+                    
+                    <div class="d-flex gap-3 justify-content-center mt-1">
+                        <a class="icon text-decoration-none" href="https://github.com/CeeG33/oc-cg-p10">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                                Repository
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="static/images/p10.png" class="img-fluid rounded-top" alt="Screenshot of one project">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid w-100 my-md-3 ps-md-3">
+        <div class="row">
+            <div class="col text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+
+                    <h2 class="display-5">Creating a MVP Django app</h2>
+                    <p class="lead">A new start-up called LITReview wants to develop a product to enable communities of book readers to publish/ request book/ articles reviews.</p>
+
+                    <p class="lead text-decoration-underline">Problems solved</p>
+                    <ul class="lead text-start">
+                        <li>Creating a website following clients specifications and wireframes.</li>
+                        <li>Coding models following the clients database sketch.</li>
+                        <li>Implementing an account creation and authentication system.
+                        </li>
+                        <li>Creating various pages to enable CRUD operations on posts and comments.
+                        </li>
+                        <li>Creating a stream page which is updated based on the user's activity and follows on the website.
+                        </li>
+                        <li>Implementing a system of followers/followees.
+                        </li>
+                        <li>Using the WCAG Accessibility guidelines.
+                        </li>
+                    </ul>
+
+                    <p class="lead text-decoration-underline">Tools used</p>
+                    <span class="badge rounded-pill text-bg-secondary">Python</span> 
+                    <span class="badge rounded-pill text-bg-secondary">Django</span>
+                    <span class="badge rounded-pill text-bg-secondary">SQLite</span>
+
+                    <p class="lead text-decoration-underline mt-4">Links</p>
+                    
+                    <div class="d-flex gap-3 justify-content-center mt-1">
+                        <a class="icon text-decoration-none" href="https://github.com/CeeG33/oc-cg-p9">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                                Repository
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="static/images/p9.png" class="img-fluid rounded-top" alt="Screenshot of one project">
+                
+            </div>
+
+            <div class="col text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+
+                    <h2 class="display-5">Solving financial problems using algorithms</h2>
+                    <p class="lead">The AlgoInvest&Trade financial company advises their clients on investment strategies by the use of algorithms with a view to maximise profits. They are willing to develop a script which will perform the analysis of share data and advise which ones will generate the best profit based on the client's budget.</p>
+
+                    <p class="lead text-decoration-underline">Problems solved</p>
+                    <ul class="lead text-start">
+                        <li>Translating financial operations into code.</li>
+                        <li>Developing a brute force script which realises financial simulations against a given dataset.</li>
+                        <li>Improving the brute force script's performance by the use of algorithms. Execution time and memory usage performances improved by more than x20k.</li>
+                    </ul>
+
+                    <p class="lead text-decoration-underline">Tools used</p>
+                    <span class="badge rounded-pill text-bg-secondary">Python</span> 
+                    <span class="badge rounded-pill text-bg-secondary">Memory Profiler</span>
+
+                    <p class="lead text-decoration-underline mt-4">Links</p>
+                    
+                    <div class="d-flex gap-3 justify-content-center mt-1">
+                        <a class="icon text-decoration-none" href="https://github.com/CeeG33/oc-cg-p7">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                                Repository
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="static/images/p7.png" class="img-fluid rounded-top" alt="Screenshot of one project">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid w-100 my-md-3 ps-md-3">
+        <div class="row">
+            <div class="col text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+
+                    <h2 class="display-5">Developing the front-end of a Netflix-like website</h2>
+                    <p class="lead">The JustStreamIt association wants to develop a website which will help the users access the trending movies list of the moment. This enables users to find a movie to watch when lacking inspiration.</p>
+
+                    <p class="lead text-decoration-underline">Problems solved</p>
+                    <ul class="lead text-start">
+                        <li>Rendering real-time information by doing requests to an API.</li>
+                        <li>Designing a website following wireframes and look & feel provided by the client.</li>
+                        <li>Implementing an account creation and authentication system.
+                        </li>
+                        <li>Including interactivity to the page with JavaScript.
+                        </li>
+                    </ul>
+
+                    <p class="lead text-decoration-underline">Tools used</p>
+                    <span class="badge rounded-pill text-bg-secondary">HTML</span> 
+                    <span class="badge rounded-pill text-bg-secondary">CSS</span>
+                    <span class="badge rounded-pill text-bg-secondary">Vanilla JavaScript</span>
+
+                    <p class="lead text-decoration-underline mt-4">Links</p>
+                    
+                    <div class="d-flex gap-3 justify-content-center mt-1">
+                        <a class="icon text-decoration-none" href="https://github.com/CeeG33/oc-cg-p6">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                                Repository
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="static/images/p6.png" class="img-fluid rounded-top" alt="Screenshot of one project">
+                
+            </div>
+
+            <div class="col text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+
+                    <h2 class="display-5">Script-based software managing Chess tournaments</h2>
+                    <p class="lead">A local chess club is looking for a solution which will help them in organising chess tournaments properly.</p>
+
+                    <p class="lead text-decoration-underline">Problems solved</p>
+                    <ul class="lead text-start">
+                        <li>Developing a script based software.</li>
+                        <li>Applying a design pattern (MVC) compatible with the specifications requested by the client.</li>
+                        <li>Ensuring the software can be run offline.</li>
+                        <li>Persisting the data at any moment (in case of an electricity cut for example).</li>
+                    </ul>
+
+                    <p class="lead text-decoration-underline">Tools used</p>
+                    <span class="badge rounded-pill text-bg-secondary">Python</span> 
+                    <span class="badge rounded-pill text-bg-secondary">JSON</span>
+
+                    <p class="lead text-decoration-underline mt-4">Links</p>
+                    
+                    <div class="d-flex gap-3 justify-content-center mt-1">
+                        <a class="icon text-decoration-none" href="https://github.com/CeeG33/oc-cg-p4">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                                Repository
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="static/images/p4.png" class="img-fluid rounded-top" alt="Screenshot of one project">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid w-100 my-md-3 ps-md-3">
+        <div class="row">
+            <div class="col text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+
+                    <h2 class="display-5">Plan a development process with Scrum / Agile development methods</h2>
+                    <p class="lead">Dev4U, an IT consulting firm has been approached by Learn@Home, an association which helps students find volunteer mentors to help them in their homework. They want us to develop this solution for them.</p>
+
+                    <p class="lead text-decoration-underline">Problems solved</p>
+                    <ul class="lead text-start">
+                        <li>Translating clients brief into UML use case diagrams.</li>
+                        <li>Writing clear user stories which capture clients needs and frame the development process.</li>
+                        <li>Producing wireframes (sketches) of the website in line with client's expectations.
+                        </li>
+                    </ul>
+
+                    <p class="lead text-decoration-underline">Tools used</p>
+                    <span class="badge rounded-pill text-bg-secondary">Google Suite</span> 
+                    <span class="badge rounded-pill text-bg-secondary">Draw.io</span>
+                    <span class="badge rounded-pill text-bg-secondary">Trello</span>
+
+                    <p class="lead text-decoration-underline mt-4">Links</p>
+                    
+                    <div class="d-flex gap-3 justify-content-center mt-1">
+                        <a class="icon text-decoration-none" href="#">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                                Use case diagrams
+                            </span>
+                        </a>
+
+                        <a class="icon text-decoration-none" href="#">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                                Product Backlog
+                            </span>
+                        </a>
+
+                        <a class="icon text-decoration-none" href="#">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                                Wireframes
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="static/images/p3.png" class="img-fluid rounded-top" alt="Screenshot of one project">
+                
+            </div>
+
+            <div class="col text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                <div class="my-3 py-3">
+
+                    <h2 class="display-5">Scraper for market analysis</h2>
+                    <p class="lead">A company specialised in selling second-hand books online, Books Online, wants to create a scraper that monitors their competitors' prices automatically.</p>
+
+                    <p class="lead text-decoration-underline">Problems solved</p>
+                    <ul class="lead text-start">
+                        <li>Creating a script that automatically monitors market prices evolutions.</li>
+                        <li>Populating data of interest via an ETL (Extract, Transform, Load) protocol.</li>
+                        <li>Managing local folder structure and creation process.</li>
+                    </ul>
+
+                    <p class="lead text-decoration-underline">Tools used</p>
+                    <span class="badge rounded-pill text-bg-secondary">Python</span> 
+                    <span class="badge rounded-pill text-bg-secondary">CSV</span>
+
+                    <p class="lead text-decoration-underline mt-4">Links</p>
+                    
+                    <div class="d-flex gap-3 justify-content-center mt-1">
+                        <a class="icon text-decoration-none" href="https://github.com/CeeG33/oc-cg-p2">
+                            <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                                Repository
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="static/images/p2.png" class="img-fluid rounded-top" alt="Screenshot of one project">
+                
+            </div>
+        </div>
+    </div>
+
+</main>
+
 {% endblock %}
