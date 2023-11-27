@@ -1,6 +1,44 @@
 {% extends "base.html" %}
 {% block title %}About Me{% endblock %}
 {% block content %}
-    <h1>About Me</h1>
-    <p>This is the about me page</p>
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5">
+        <div class="col-md-10 mx-auto col-lg-5">
+            <img class="img-fluid rounded-circle" src="static/images/cgphoto.jpg" alt="Photo">
+        </div>
+        
+        <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 my-4">About Me</h1>
+            <p class="col-lg-10 fs-4">I am Ciran GÜRBÜZ, software developer and problem solver living in Paris, France.</p>
+            <p class="col-lg-10 fs-4">I became a software developer by doing a career transition following nine years in the building industry as Cost and Construction Manager.</p>
+            <p class="col-lg-10 fs-4">I undertook the Python Application Developer course given by OpenClassrooms which is equivalent to a first year of a Master's degree.</p>
+            <p class="col-lg-10 fs-4">When not coding, you will find me most of the time playing guitar or drums !</p>
+
+            <div class="d-flex gap-3 justify-content-center justify-content-lg-start align-items-center mt-1">
+                <a class="icon text-decoration-none" href="https://github.com/CeeG33/">
+                    <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                        <svg class="bi" width="24" height="24"><use xlink:href="#github"/></svg>
+                        GitHub
+                    </span>
+                </a>
+
+                <a class="icon text-decoration-none" href="https://www.linkedin.com/in/ciran-gurbuz/">
+                    <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                        <svg class="bi" width="24" height="24"><use xlink:href="#linkedin"/></svg>
+                        LinkedIn
+                    </span>
+                </a>
+
+                <a class="icon text-decoration-none" href="mailto:ciran.gurbuz@gmail.com">
+                    <span class="badge d-flex gap-2 align-items-center p-1 pe-2 text-dark-emphasis  bg-light-subtle border border-dark-subtle rounded-pill">
+                        <svg class="bi" width="24" height="24"><use xlink:href="#email"/></svg>
+                        Email
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
 {% endblock %}

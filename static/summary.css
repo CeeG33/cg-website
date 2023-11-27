@@ -19,3 +19,8 @@
   width: 3rem;
   height: 3rem;
 }
+
+body {
+  min-height: 100vh;
+  height: 100%;
+}
