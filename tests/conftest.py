@@ -5,10 +5,12 @@ from website import app
 @pytest.fixture
 def app_():
     """Configuring app for testing session."""
-    app.config.update({
-        "TESTING": True,
-    })
-    
+    app.config.update(
+        {
+            "TESTING": True,
+        }
+    )
+
     yield app
 
 
