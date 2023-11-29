@@ -1,0 +1,72 @@
+name: CG Website CI/CD - Master branch only
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.11]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+        
+    - name: Install Dependencies
+      id: dependencies
+      run: |
+        pip install poetry --upgrade pip
+        poetry config virtualenvs.create false
+        poetry install --no-dev
+        
+    - name: Run Tests
+      run: |
+        pytest
+      if: ${{ steps.dependencies.outcome }} == "success"
+        
+    - name: Ensures test coverage is above 90%
+      id: coverage_test
+      run: |
+        pytest --cov-fail-under=90
+      if: ${{ steps.dependencies.outcome }} == "success"
+        
+    - name: Login to Docker Hub
+      id: dockerhub_login
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      if: ${{ steps.coverage_test.outcome }} == "success"
+      
+    - name: Build and push Docker images
+      id: packaging
+      uses: docker/build-push-action@v5.0.0
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: ceeg33/cg-website:${{ github.sha }},ceeg33/cg-website:latest
+      if: ${{ steps.dockerhub_login.outcome }} == "success"
+      
+    - name: Deploy Docker to AWS (EC2)
+      id: deployment
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.EC2_SECRET_KEY }}
+        script: |
+          docker stop cg-website || true
+          docker rm cg-website || true
+          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/cg-website:${{ github.sha }}
+          docker run -d -p 8000:8000 --name cg-website ${{ secrets.DOCKERHUB_USERNAME }}/cg-website:${{ github.sha }}
+      if: ${{ steps.packaging.outcome }} == "success"
