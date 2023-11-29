@@ -13,12 +13,12 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Install dependencies
-RUN pip install poetry --upgrade pip
-RUN poetry config virtualenvs.create false
-RUN poetry install --no-dev
+RUN pip install poetry --upgrade pip \
+    && poetry config virtualenvs.create false \
+    && poetry install --no-dev
 
 # Expose port 8000 for accessing the application
-EXPOSE 8080
+EXPOSE 8000
 
 # Running the application
-CMD ["poetry", "run", "waitress-serve", "--host", "127.0.0.1", "website:app"]
+CMD ["poetry", "run", "python", "website.py"]
