@@ -33,3 +33,7 @@ def projects():
 def about_me():
     """Renders the about me page using the about_me.html file."""
     return render_template("about_me.html", navigation=navigation)
+
+
+if __name__ == "__main__":
+    app.run()
