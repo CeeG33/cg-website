@@ -65,7 +65,7 @@ jobs:
         username: ${{ secrets.EC2_USERNAME }}
         key: ${{ secrets.EC2_SECRET_KEY }}
         script: |
-          poetry run docker stop cg-website || true
-          poetry run docker rm cg-website || true
-          poetry run docker run --pull "always" -d -p 8000:8000 --name cg-website ${{ secrets.DOCKERHUB_USERNAME }}/cg-website:latest
+          docker stop cg-website || true
+          docker rm cg-website || true
+          docker run --pull "always" -d -p 8000:8000 --name cg-website ${{ secrets.DOCKERHUB_USERNAME }}/cg-website:latest
       if: ${{ steps.packaging.outcome }} == "success"
