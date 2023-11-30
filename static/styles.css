@@ -50,4 +50,46 @@ body {
 .badge {
     --bs-badge-padding-y: 0.2em;
     font-size: 0.9em;
+    background-color: #454852;
+    color: white;
+    border: 1px solid black;
+    transition: 0.5s;
+}
+
+.badge:hover {
+    box-shadow: 0px 0px 7px 2px white;
+}
+
+a.nav-link {
+    text-decoration: underline transparent;
+    transition: 0.5s;
+}
+
+a.nav-link:link {
+    text-decoration-color: transparent;
+    background-color: transparent;
+}
+
+a.nav-link:visited {
+    text-decoration-color: white;
+    background-color: #454852;
+    border-radius: 10px;
+}
+
+a.nav-link:focus {
+    text-decoration-color: white;
+    background-color: #454852;
+    border-radius: 10px;
+}
+
+a.nav-link:hover {
+    text-decoration-color: white;
+    background-color: #454852;
+    border-radius: 10px;
+}
+
+a.nav-link:active {
+    text-decoration-color: white;
+    background-color: #454852;
+    border-radius: 10px;
 }
