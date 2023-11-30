@@ -67,6 +67,5 @@ jobs:
         script: |
           docker stop cg-website || true
           docker rm cg-website || true
-          docker pull ${{ secrets.DOCKERHUB_USERNAME }}/cg-website:${{ github.sha }}
-          docker run -d -p 8000:8000 --name cg-website ${{ secrets.DOCKERHUB_USERNAME }}/cg-website:${{ github.sha }}
+          docker run --pull "always" -d -p 8000:8000 --name cg-website ${{ secrets.DOCKERHUB_USERNAME }}/cg-website:latest
       if: ${{ steps.packaging.outcome }} == "success"
